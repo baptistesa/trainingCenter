@@ -1,0 +1,66 @@
+.titleBlock > p {
+    color: #808080ad;
+}
+
+textarea {
+    resize: none;
+    width: 95%;
+}
+
+button {
+    background-color: #0a6ed1;
+    color: #fff;
+    outline-color: #fff;
+    height: 26px;
+    line-height: 24px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0 8px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: '72',Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    pointer-events: all;
+    cursor: pointer;
+    outline-offset: -3px;
+}
+
+.buttonsValidation {
+    width: 95%;
+    text-align: right;
+    position: fixed;
+    bottom: 2%;
+}
+
+.accept {
+    background-image: none;
+    background-color: #fff;
+    border-color: #107e3e;
+    color: #107e3e;
+}
+
+.accept:hover {
+    background-color: #f1fdf6;
+    border-color: #107e3e;
+    color: #107e3e;
+}
+
+.reject {
+    background-image: none;
+    background-color: #fff;
+    border-color: #b00;
+    color: #b00;
+}
+
+.reject:hover {
+    background-color: #ffebeb;
+    border-color: #b00;
+    color: #b00;
+}

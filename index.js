@@ -15,8 +15,7 @@ function clickOnUpload() {
 }
 
 function clickOnEditor() {
-    console.log("editor")
-    
+    document.location.href = "./src/editor.html";    
 }
 
 function clickOnGenerator() {

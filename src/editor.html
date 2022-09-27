@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="editor.css">
+    <script src="editor.js"></script>
+    <title>JSON Editor</title>
+</head>
+
+<body>
+    <div class="title">
+        <div id="backButton" style="display: inline-block;">
+            <img style="height: 30px;" src="../img/icons/backButton.png">
+        </div>
+        <div class="titleBlock" style="display: inline-block;">
+            <h3>Training center</h3>
+            <p>Anotate your data</p>
+        </div>
+    </div>
+
+    <div>
+        <h3>Add an attribute</h3>
+        <div style="margin-top: 7%;">
+            <div style="display: inline-block; vertical-align: middle">
+                <input id="attributesInput" />
+            </div>
+            <div style="display: inline-block; vertical-align: middle;">
+                <button>Add</button>
+            </div>
+        </div>
+
+        <div id="tagsMainContainer">
+        </div>
+    </div>
+
+
+    <div class="buttonsValidation">
+        <button class="reject" style="display: inline-block;">
+            Cancel
+        </button>
+        <button id="continueButton" class="accept" style="display: inline-block;">
+            Continue
+        </button>
+    </div>
+</body>
+
+</html>

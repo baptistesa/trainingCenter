@@ -5,6 +5,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function goBack() {
-    console.log("ok");
     window.history.back();
 }
