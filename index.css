@@ -1,3 +1,25 @@
+/* Generic element tags */
+h3 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 2%;
+}
+
+img[name="icons"] {
+    height: 8rem;
+}
+
+/* Class perso */
+
+.mainButtons {
+    text-align: center;
+}
+
+
+
+
 .title {
-    font-family: "72override",var(--sapFontFamily);   
+    font-family: "Arial";   
 }
