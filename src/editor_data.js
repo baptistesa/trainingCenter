@@ -2,6 +2,7 @@ var attributesUsed = [];
 var previousSelectedText = "";
 var text = "";
 var mapping = {};
+var fullContent = "";
 
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log("attribtes: ", localStorage.getItem("attributes"));
@@ -29,6 +30,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 document.getElementsByClassName("item")[j].addEventListener("click", event => {
                     mapping[event.path[0].outerText] = text;
                     document.getElementById(event.path[0].outerText).innerHTML = text;
+                    // find position of the word in the sentence
+                    const wordIndex = fullContent.indexOf(text);
+                    let endIndex;
+                    if (wordIndex !== -1) {
+                        endIndex = wordIndex + text.length - 1;
+                        console.log(wordIndex, endIndex);
+                    }
+                    document.getElementById("position" + event.path[0].outerText).innerHTML = "[" + wordIndex + "," + endIndex + "]";
                     console.log(mapping);
                 });
         }
@@ -53,15 +62,15 @@ function goBack() {
 
 // Go from text area to text selection
 function transformArea() {
-    let value = document.getElementById("contentTextArea").value;
+    fullContent = document.getElementById("contentTextArea").value;
     document.getElementById("contentTextArea").style.display = "none";
-    document.getElementById("pageContainer").innerHTML += '<div id="generatedText" class="selectableDiv">' + value + '</div>';
+    document.getElementById("pageContainer").innerHTML += '<div id="generatedText" class="selectableDiv">' + fullContent + '</div>';
     document.getElementById("generatedText").addEventListener("mouseup", () => {
         selectedText();
     });
     document.getElementById("attributesMapping").style.display = "block";
     for (let index = 0; index < attributesUsed.length; index++)
-        document.getElementById("attributeTable").innerHTML += '<tr><td>' + attributesUsed[index] + '</td><td id="' + attributesUsed[index] + '" class="tableItem"></td></tr>';
+        document.getElementById("attributeTable").innerHTML += '<tr><td>' + attributesUsed[index] + '</td><td id="' + attributesUsed[index] + '" class="tableItem"></td><td id="position' + attributesUsed[index] + '" class="tableItem"></td></tr>';
 }
 
 // Handle the selection of text
