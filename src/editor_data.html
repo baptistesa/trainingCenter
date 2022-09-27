@@ -22,19 +22,35 @@
         </div>
     </div>
 
-    <div style="text-align: center; margin-top: 5%;">
+    <div id="pageContainer" style="text-align: center; margin-top: 5%;">
         <h3 style="text-align: left">Paste the text</h3>
         <textarea id="contentTextArea" style="margin-top: 3%; height: 20rem;">
 
         </textarea>
     </div>
 
+
+    <div id="context-menu">
+
+    </div>
+
+    <div id="attributesMapping" style="display: none;">
+        <h3 style="text-align: left; margin-top: 15%;">Attributes mapping</h3>
+        <table id="attributeTable" style="margin-top: 5%;">
+            <tr>
+                <th>Attribute name</th>
+                <th>Selected value</th>
+            </tr>
+        </table>
+    </div>
+
+
     <div class="buttonsValidation">
         <button class="reject" style="display: inline-block;">
             Cancel
         </button>
         <button id="continueButton" class="accept" style="display: inline-block;">
-            Continue
+            Annotate
         </button>
     </div>
 
