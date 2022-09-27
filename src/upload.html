@@ -22,12 +22,12 @@
         </div>
     </div>
 
-    <div class="uploaderArea">
+    <div class="uploaderArea" onclick="document.getElementById('selectedFile').click();">
         <img name="uploadIcon" src="../img/documents.png">
         <p>Select a JSON file to upload</p>
         <span>or drag and drop it here</span>
+        <input type="file" id="selectedFile" style="display: none;" />
     </div>
-
 
 </body>
 

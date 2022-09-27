@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log("attribtes: ", localStorage.getItem("attributes"));
     attributesUsed = JSON.parse(localStorage.getItem("attributes"));
     for (let index = 0; index < attributesUsed.length; index++)
-        mapping[attributesUsed[index]] = "";
+        mapping[attributesUsed[index]] = { value: "", position: "" };
     document.getElementById("backButton").addEventListener("click", () => {
         goBack();
     });
@@ -28,15 +28,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
             contextMenu.innerHTML += '<div class="item">' + allAttributes[i] + '</div>';
             for (let j = 0; j < document.getElementsByClassName("item").length; j++)
                 document.getElementsByClassName("item")[j].addEventListener("click", event => {
-                    mapping[event.path[0].outerText] = text;
+                    mapping[event.path[0].outerText].value = text;
                     document.getElementById(event.path[0].outerText).innerHTML = text;
                     // find position of the word in the sentence
                     const wordIndex = fullContent.indexOf(text);
                     let endIndex;
-                    if (wordIndex !== -1) {
+                    if (wordIndex !== -1)
                         endIndex = wordIndex + text.length - 1;
-                        console.log(wordIndex, endIndex);
-                    }
+                    mapping[event.path[0].outerText].position = "[" + wordIndex + "," + endIndex + "]";
                     document.getElementById("position" + event.path[0].outerText).innerHTML = "[" + wordIndex + "," + endIndex + "]";
                     console.log(mapping);
                 });
