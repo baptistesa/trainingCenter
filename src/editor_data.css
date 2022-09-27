@@ -32,7 +32,7 @@ button {
     outline-offset: -3px;
 }
 
-.buttonsValidation {
+.buttonsValidation, .buttonsPush {
     width: 95%;
     text-align: right;
     position: fixed;

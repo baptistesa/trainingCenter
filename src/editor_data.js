@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     let endIndex;
                     if (wordIndex !== -1)
                         endIndex = wordIndex + text.length - 1;
-                    mapping[event.path[0].outerText].position = "[" + wordIndex + "," + endIndex + "]";
+                    mapping[event.path[0].outerText].position = [wordIndex, endIndex];
                     document.getElementById("position" + event.path[0].outerText).innerHTML = "[" + wordIndex + "," + endIndex + "]";
                     console.log(mapping);
                 });
@@ -59,7 +59,7 @@ function goBack() {
     window.history.back();
 }
 
-// Go from text area to text selection
+// Go from text area to text selection and change buttons to vlidate
 function transformArea() {
     fullContent = document.getElementById("contentTextArea").value;
     document.getElementById("contentTextArea").style.display = "none";
@@ -70,10 +70,39 @@ function transformArea() {
     document.getElementById("attributesMapping").style.display = "block";
     for (let index = 0; index < attributesUsed.length; index++)
         document.getElementById("attributeTable").innerHTML += '<tr><td>' + attributesUsed[index] + '</td><td id="' + attributesUsed[index] + '" class="tableItem"></td><td id="position' + attributesUsed[index] + '" class="tableItem"></td></tr>';
+    document.getElementById("buttonsValidation").style.display = "none";
+    document.getElementById("buttonsPush").addEventListener("click", () => {
+        clickPushButton();
+    });
+    document.getElementById("buttonsPush").style.display = "block";
+    
 }
 
 // Handle the selection of text
 function selectedText() {
     if (window.getSelection)
         text = window.getSelection().toString();
+}
+
+// Last button which displays screen end
+function clickPushButton() {
+    generateJSON();
+    document.location.href = "./editor_end.html";
+}
+
+// Generate the final json string
+function generateJSON() {
+    let finalJson = {
+        id: "",
+        text: fullContent,
+        meta: {},
+        annotation_approver: null,
+        labels: []
+    };
+    for (let key in mapping) {
+        mapping[key].position.push(key);
+        let tmp = mapping[key].position;
+        finalJson.labels.push(tmp);
+    }
+    localStorage.setItem("finalJson", JSON.stringify(finalJson));
 }

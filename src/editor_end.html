@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="editor_end.css">
+    <script src="editor_end.js"></script>
+    <title>JSON end</title>
+</head>
+
+<body>
+    <div class="title">
+        <div id="backButton" style="display: inline-block;">
+            <img style="height: 30px;" src="../img/icons/backButton.png">
+        </div>
+        <div class="titleBlock" style="display: inline-block;">
+            <h3>Training center</h3>
+            <p>Validate your data</p>
+        </div>
+    </div>
+
+    <div id="" class="mainContent" style="text-align: center; margin-top: 5%;">
+
+        <div id="generatedString">
+            <h3 style="text-align: left">Generated data</h3>
+            <textarea id="result" disabled="true" rows="15"></textarea>
+        </div>
+
+        <div id="confirmationMessage" style="display: none; margin-top: 40%;" class="fadeInLeft">
+            <img src="../img/icons/check.png">
+            <p>Data sent successfully</p>
+        </div>
+    </div>
+    <div id="buttonsValidation" class="buttonsValidation">
+        <button class="reject" style="display: inline-block;">
+            Cancel
+        </button>
+        <button id="confirmButton" class="accept" style="display: inline-block;">
+            Confirm and Send Data
+        </button>
+    </div>
+
+    <div id="homeButton" style="text-align: center; margin-top: 5%; display: none;" class="fadeIn">
+        <button class="accept">
+            Go to home
+        </button>
+    </div>
+
+</body>
+
+</html>
