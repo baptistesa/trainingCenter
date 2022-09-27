@@ -1,30 +1,25 @@
-.titleBlock > p {
+.titleBlock>p {
     color: #808080ad;
 }
 
-.uploaderArea {
-    width: 90%;
+.title {
+    margin: 8px;
+}
+
+.modelCard {
+    display: inline-block;
     height: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-color: gray;
-    border-style: dashed;
-    border-width: 3px;
-    margin-top: 10%;
-    border-radius: 15px;
-    text-align: center;
-    padding: 5%;
+    width: 7rem;
+    margin-top: 5%;
+    border-radius: 5px;
+    margin-left: 3%;
+    box-shadow: 3px 13px 21px 5px rgb(121 133 148 / 31%);
 }
 
-img[name="uploadIcon"] {
-    height: 4rem;
+div::-webkit-scrollbar {
+    display: none;
 }
 
-.uploaderArea > p {
-    margin-bottom: 2%;
-}
-
-.uploaderArea > span {
-    font-size: 13px;
-    color: #858585;
+body {
+    margin: 0;
 }
