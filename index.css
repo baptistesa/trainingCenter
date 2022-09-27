@@ -15,11 +15,22 @@ img[name="icons"] {
 
 .mainButtons {
     text-align: center;
+    margin-top: 10%;
 }
-
-
-
 
 .title {
     font-family: "Arial";   
+}
+
+.title > p {
+    color: #808080ad;
+}
+
+.buttonsContainer {
+    padding: 5%;
+}
+
+.buttonsContainer:hover {
+    background: #FAFAFA;
+    cursor: pointer;
 }
