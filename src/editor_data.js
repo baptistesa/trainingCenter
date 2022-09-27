@@ -75,7 +75,7 @@ function transformArea() {
         clickPushButton();
     });
     document.getElementById("buttonsPush").style.display = "block";
-    
+
 }
 
 // Handle the selection of text
@@ -104,5 +104,13 @@ function generateJSON() {
         let tmp = mapping[key].position;
         finalJson.labels.push(tmp);
     }
-    localStorage.setItem("finalJson", JSON.stringify(finalJson));
+    let currentObj = [];
+    console.log(localStorage.getItem("finalJson"));
+    if (JSON.parse(localStorage.getItem("finalJson"))) {
+        currentObj = JSON.parse(localStorage.getItem("finalJson"));
+        currentObj.push(finalJson);
+    }
+    else
+        currentObj.push(finalJson);
+    localStorage.setItem("finalJson", JSON.stringify(currentObj));
 }

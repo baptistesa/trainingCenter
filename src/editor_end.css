@@ -164,3 +164,16 @@ button {
         opacity: 1;
     }
 }
+
+
+.neutral {
+    background-image: none;
+    background-color: #fff;
+    border: 0.0625rem solid #0854a0;
+    color: #0854a0;
+}
+
+.neutral:hover {
+    background-color: #ebf5fe;
+}
+
