@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("generatorButton").addEventListener("click", () => {
         clickOnGenerator();
     });
+    document.getElementById("statusButton").addEventListener("click", () => {
+        clickOnStatus();
+    });
 });
 
 function clickOnUpload() {
@@ -20,4 +23,8 @@ function clickOnEditor() {
 
 function clickOnGenerator() {
     console.log("generator")
+}
+
+function clickOnStatus() {
+    document.location.href = "./src/manage.html";   
 }
