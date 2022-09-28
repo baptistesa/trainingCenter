@@ -14,11 +14,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function clickOnUpload() {
-    document.location.href = "./src/upload.html";
+    document.getElementsByTagName("body")[0].classList.add("fadeOutRight");
+    setTimeout(() => {
+        document.location.href = "./src/upload.html";
+    }, 1200)
 }
 
 function clickOnEditor() {
-    document.location.href = "./src/editor.html";    
+    document.location.href = "./src/editor.html";
 }
 
 function clickOnGenerator() {
@@ -26,5 +29,5 @@ function clickOnGenerator() {
 }
 
 function clickOnStatus() {
-    document.location.href = "./src/manage.html";   
+    document.location.href = "./src/manage.html";
 }
