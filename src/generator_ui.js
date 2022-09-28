@@ -1377,7 +1377,7 @@ function createHTML_CreateDataModel(id) {//#container
       </tr>
     </table>
     
-    <div id="dataModelList" style="height: 85rem !important;">
+    <div id="dataModelList" style="height: 85rem !important; margin-top: 15%">
       <div>
         <table id="tableList" class="tableList">
           <tr>
@@ -1777,12 +1777,13 @@ function createHTML_CreateFormat(id) {//#container
             </div>
 
             
-            <div class="buttons">
-                <div class="right">
-                    <button id="backButton" type="button" class="button inline ko">BACK</button>
-                    <button id="continueButton" type="button" class="button inline ok">GENERATE</button>
-                </div>
-            </div>
+
+            <div class="buttonsValidation fadeInRight">
+
+            <button id="continueButton" class="accept" style="display: inline-block;">
+                Generate
+            </button>
+        </div>
             <div id="datasetResult">
             <div>
         </div>
