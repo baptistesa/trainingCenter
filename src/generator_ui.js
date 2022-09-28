@@ -16,7 +16,7 @@ if(stub){
     var iof_data_models = [{
         id : "dm@1664293115422",
         name : "Bookings",
-        description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        description : "This data model contains multiple DATASET for Travel Agency Bookings. It should be able to provide enough data to train Business Entity Recognition. A Dataset is a mix of ENTITIES to be recognized and fillers as such as pieces and full SENTENCES",
     
         fillers : [
             {
@@ -196,7 +196,7 @@ if(stub){
             {
                 id : "f@1664302304404",
                 name : "e-Mail",
-                description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                description : "A Dataset for incoming email. Structure containing greetings and presentations",
                 sentences : [
                     [
                         {
@@ -1222,6 +1222,8 @@ function createHTML_selectdataModel(){//#container
         <div class="title">
             SELECT A DATA MODEL
         </div>
+        <hr>
+        <br>
         <div class="tiles">
             <div id="createDataModel" class="tile inline">
                 <div class="title">CREATE A NEW DATA MODEL</div>
@@ -1360,9 +1362,11 @@ function createHTML_CreateDataModel(id){//#container
     <div class="title">
       CREATE A DATA MODEL
     </div>
+    <hr>
+    <br>
     <table class="tableHead">
       <tr>
-        <td><div id="modelName">Name</div></td>
+        <td><div id="modelName">Name</div style="font-weight:bold"></td>
         <td><input id="modelNameValue" value="`+iof_data_models[current_data_model_index].name+`"></input></td>
       </tr>
       <tr>
@@ -1371,6 +1375,7 @@ function createHTML_CreateDataModel(id){//#container
       </tr>
     </table>
     <hr>
+    <br>
     <div id="dataModelList" class="">
       <div>
         <table id="tableList" class="tableList">
@@ -1594,18 +1599,22 @@ function createHTML_selectFormat(){//#container
     <div id="selectedData">
         <div class="selectedDataModel">
             <div class="title">DATA MODEL</div>
-            <div classe="name">`+iof_data_models[current_data_model_index].name+`</div>
+            <hr>
+            <br>
+            <div classe="name" style="font-weight:bold">`+iof_data_models[current_data_model_index].name+`</div>
             <div class="description">`+iof_data_models[current_data_model_index].description+`</div>
         </div>
-        <hr>
+        
     <div>
+    <hr>
+    <br>
     <div id="selectFormat">
         <div class="title">
-            SELECT A FORMAT
+            SELECT A DATASET
         </div>
         <div class="tiles">
             <div id="createFormat" class="tile inline">
-                <div class="title">CREATE A NEW FORMAT</div>
+                <div class="title">CREATE A NEW DATASET</div>
                 <img class="center" name="icons" src="img/287103_UX_Tool_Suite_R_blue.png">
             </div>
         </div>
@@ -1730,14 +1739,16 @@ function createHTML_CreateFormat(id){//#container
         <div class="title">
             CREATE A DATASET
         </div>
+        <hr>
         <div class="selectedDataModel">
             <div class="title">DATA MODEL</div>
-            <div classe="name">`+iof_data_models[current_data_model_index].name+`</div>
+            <br>
+            <div classe="name" "font-weight:bold">`+iof_data_models[current_data_model_index].name+`</div>
             <div class="description">`+iof_data_models[current_data_model_index].description+`</div>
         </div>
 
         <hr>
-
+        <br>
         <div class="title">
             DATASET
         </div>
