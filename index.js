@@ -17,11 +17,14 @@ function clickOnUpload() {
     document.getElementsByTagName("body")[0].classList.add("fadeOutRight");
     setTimeout(() => {
         document.location.href = "./src/upload.html";
-    }, 1200)
+    }, 500)
 }
 
 function clickOnEditor() {
-    document.location.href = "./src/editor.html";
+    document.getElementsByTagName("body")[0].classList.add("fadeOutRight");
+    setTimeout(() => {
+        document.location.href = "./src/editor.html";
+    }, 500)
 }
 
 function clickOnGenerator() {
@@ -29,5 +32,8 @@ function clickOnGenerator() {
 }
 
 function clickOnStatus() {
-    document.location.href = "./src/manage.html";
+    document.getElementsByTagName("body")[0].classList.add("fadeOutRight");
+    setTimeout(() => {
+        document.location.href = "./src/manage.html";
+    }, 500)
 }

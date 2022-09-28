@@ -5,5 +5,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function goBack() {
-    window.history.back();
+    document.getElementsByClassName("fadeInLeft")[0].classList.add("fadeOutRight");
+    document.getElementsByClassName("fadeInLeft")[1].classList.add("fadeOutRight");
+    setTimeout(() => {
+        window.history.back();
+    }, 500)
 }
