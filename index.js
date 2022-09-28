@@ -28,7 +28,10 @@ function clickOnEditor() {
 }
 
 function clickOnGenerator() {
-    console.log("generator")
+    document.getElementsByTagName("body")[0].classList.add("fadeOutLeft");
+    setTimeout(() => {
+        document.location.href = "./src/generator_ui.html";
+    }, 500)
 }
 
 function clickOnStatus() {

@@ -1,0 +1,322 @@
+
+
+.tiles {
+    overflow-y:hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.tile {
+    margin: 7px;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    background-color: #fafafa;
+    border-color:rgb(198, 198, 198);
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    height : 360px;
+    width : 240px;
+    vertical-align: top;
+    position:relative;
+    text-align: center;
+}
+
+.tile .title {
+    background-color: #c3c3c3;
+    color: #FFFF;
+    font-size: 1em;
+    line-height: 1em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 3px 5px 3px 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tile .delete {
+    position:absolute;
+    bottom: 0;
+    text-align: center;
+    border-top-style:dashed;
+    border-top-width: 1px;
+    border-top-color:#a2a2a2;
+    background-color: #FFFF!important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    color:#a2a2a2;
+    width: inherit;
+}
+
+.tile .delete:hover {
+    -webkit-filter: brightness(120%)!important;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color:#d48484;
+    background-color: #d4848434!important;
+    border-color: #d4848478!important;
+}
+
+.bottom {
+    position:relative;
+    text-align: center;
+}
+
+.tile img.center,.bottom img.center {
+    margin: 0;
+    position: relative;
+    /* top: 50%;
+    left: 50%; 
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
+}
+
+.tile .description {
+    white-space:initial;
+    padding: 10px 5px 10px 5px;
+    /* text-justify:newspaper; */ /* */ 
+}
+
+.tile:hover {
+    -webkit-filter: brightness(90%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+body {
+    font-family: "Arial";  
+}
+
+.inline {
+    display: inline-block;
+}
+
+
+img[name="icons"] {
+    height: 8rem;
+}
+
+
+/* ######### SENTENCES #########*/
+
+.sentences {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.sentence {
+    margin: 7px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 2px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fafafa;
+    border-color:rgb(198, 198, 198);
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    height : 35px;
+    width : 98%;
+    position:relative;
+    overflow-y:hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.filler {
+    margin: 2px;
+    padding: 5px;
+    border-radius: 3px;
+    border-width: 1px;
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+    vertical-align: middle;
+}
+
+.filler.isdata{
+    background-color: #a7b7e7a1!important;
+    border-color:rgb(198, 198, 198)!important;
+}
+
+.filler:not(.isdata){
+    background-color: #fafafa;
+    border-color:rgb(198, 198, 198);
+    border-style: dashed;
+}
+
+
+
+select{
+    margin: 2px;
+    margin-right: 8px;
+    padding: 5px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+option.isdata{
+    background-color: #a7b7e7!important;
+}
+
+
+/* ######### BUTTON #########*/
+/* width */
+
+.buttons {
+    height: 30px;
+}
+
+.button {
+    border: none;
+    border-radius : 3px;
+    font-size: 1.3em;
+    color: #FFFFFF;
+    padding: 2px 10px 2px 10px;
+    margin: 4px;
+    text-align: center;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.right {
+    float:right;
+}
+
+/* .button.ok{
+    background-color: #84a4d4;
+}
+.button.ko{
+    background-color: #d48484;
+}
+.button{
+    background-color: #cdcdcd;
+}
+
+.button:hover {
+    -webkit-filter: brightness(90%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.button.ok:active {
+    transform: translateY(3px);
+    background-color: #3bd43b;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.button:active {
+    transform: translateY(2px);
+    background-color: #a2a2a2;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.button .ko:hover {background-color: #a0bde9}
+.button .ko:active {
+    transform: translateY(4px);
+    background-color: #3bd43b;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+} */
+
+
+button {
+    background-color: #0a6ed1;
+    color: #fff;
+    outline-color: #fff;
+    height: 26px;
+    line-height: 24px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0 8px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: '72', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    pointer-events: all;
+    cursor: pointer;
+    outline-offset: -3px;
+}
+
+
+.buttonsValidation {
+    width: 95%;
+    text-align: right;
+    position: fixed;
+    bottom: 2%;
+}
+
+.accept {
+    background-image: none;
+    background-color: #fff;
+    border-color: #107e3e;
+    color: #107e3e;
+}
+
+.accept:hover {
+    background-color: #f1fdf6;
+    border-color: #107e3e;
+    color: #107e3e;
+}
+
+.reject {
+    background-image: none;
+    background-color: #fff;
+    border-color: #b00;
+    color: #b00;
+}
+
+.reject:hover {
+    background-color: #ffebeb;
+    border-color: #b00;
+    color: #b00;
+}
+
+
+.tableHead, .tableList {
+    width: 100%;
+}
+
+/* ######### SCROLLBAR #########*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    margin-top: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.titleBlock>p {
+    color: #808080ad;
+}
