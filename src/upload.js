@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function goBack() {
-    document.getElementsByTagName("body")[0].classList.add("fadeOutRight");
+    document.getElementsByTagName("body")[0].classList.add("fadeOutLeft");
     setTimeout(() => {
         window.history.back();
     }, 500)

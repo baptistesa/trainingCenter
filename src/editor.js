@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function goBack() {
-    document.getElementsByClassName("fadeInLeft")[0].classList.add("fadeOutRight");
-    document.getElementsByClassName("fadeInLeft")[1].classList.add("fadeOutRight");
-    document.getElementsByClassName("fadeInLeft")[2].classList.add("fadeOutRight");
+    document.getElementsByClassName("fadeInRight")[0].classList.add("fadeOutLeft");
+    document.getElementsByClassName("fadeInRight")[1].classList.add("fadeOutLeft");
+    document.getElementsByClassName("fadeInRight")[2].classList.add("fadeOutLeft");
     setTimeout(() => {
         window.history.back();
     }, 500)

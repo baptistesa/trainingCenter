@@ -24,8 +24,8 @@ function goBack() {
 
 // Confirm button validation
 function sendData() {
-    document.getElementById("generatedString").classList.add("fadeOutRight");
-    document.getElementById("buttonsValidation").classList.add("fadeOutRight");
+    document.getElementById("generatedString").classList.add("fadeOutLeft");
+    document.getElementById("buttonsValidation").classList.add("fadeOutLeft");
     setTimeout(() => {
         document.getElementById("generatedString").style.display = "none";
         document.getElementById("buttonsValidation").style.display = "none";

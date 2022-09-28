@@ -74,20 +74,20 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.fadeInLeft {
-    -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
 
-@-webkit-keyframes fadeInLeft {
+@-webkit-keyframes fadeInRight {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(-100%, 0, 0);
-        transform: translate3d(-100%, 0, 0);
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
     }
 
     100% {
@@ -97,11 +97,11 @@ body::-webkit-scrollbar {
     }
 }
 
-@keyframes fadeInLeft {
+@keyframes fadeInRight {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(-100%, 0, 0);
-        transform: translate3d(-100%, 0, 0);
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
     }
 
     100% {
@@ -111,38 +111,39 @@ body::-webkit-scrollbar {
     }
 }
 
-.fadeOutRight {
-    -webkit-animation-name: fadeOutRight;
-    animation-name: fadeOutRight;
+.fadeOutLeft {
+    -webkit-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
 
-@-webkit-keyframes fadeOutRight {
+@-webkit-keyframes fadeOutLeft {
     0% {
         opacity: 1;
     }
 
     100% {
         opacity: 0;
-        -webkit-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0);
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
     }
 }
 
-@keyframes fadeOutRight {
+@keyframes fadeOutLeft {
     0% {
         opacity: 1;
     }
 
     100% {
         opacity: 0;
-        -webkit-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0);
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
     }
 }
+
 
 .fadeIn {
     -webkit-animation-name: fadeIn;
@@ -184,4 +185,3 @@ body::-webkit-scrollbar {
 .neutral:hover {
     background-color: #ebf5fe;
 }
-

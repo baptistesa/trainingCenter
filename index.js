@@ -14,14 +14,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function clickOnUpload() {
-    document.getElementsByTagName("body")[0].classList.add("fadeOutRight");
+    document.getElementsByTagName("body")[0].classList.add("fadeOutLeft");
     setTimeout(() => {
         document.location.href = "./src/upload.html";
     }, 500)
 }
 
 function clickOnEditor() {
-    document.getElementsByTagName("body")[0].classList.add("fadeOutRight");
+    document.getElementsByTagName("body")[0].classList.add("fadeOutLeft");
     setTimeout(() => {
         document.location.href = "./src/editor.html";
     }, 500)
@@ -32,7 +32,7 @@ function clickOnGenerator() {
 }
 
 function clickOnStatus() {
-    document.getElementsByTagName("body")[0].classList.add("fadeOutRight");
+    document.getElementsByTagName("body")[0].classList.add("fadeOutLeft");
     setTimeout(() => {
         document.location.href = "./src/manage.html";
     }, 500)
